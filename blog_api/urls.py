@@ -1,5 +1,5 @@
 from django.urls import path
-# from .views import PostList, PostDetail
+from .views import PostList, PostDetail
 
 app_name = 'blog_api'
 
@@ -7,6 +7,6 @@ app_name = 'blog_api'
 # 1 to show and individual post
 # 2 to show all posts
 urlpatterns = [
-    # path('<int:pk>/', PostDetail.as_view(), name='detailcreate'),
-    # path('', PostList.as_view(), name='listcreate'),
+    path('<int:pk>/', PostDetail.as_view(), name='detailcreate'),
+    path('', PostList.as_view(), name='listcreate'),
 ]

@@ -12,6 +12,7 @@ class Category(models.Model):
 
 class Post(models.Model):
 
+    #custom manager to return all the posts currently flagged as published
     class PostObjects(models.Manager):
         def get_queryset(self):
             return super().get_queryset() .filter(status='published')
