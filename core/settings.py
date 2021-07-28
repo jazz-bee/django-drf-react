@@ -44,7 +44,11 @@ LOCAL_APPS = [
     'blog_api',
 ]
 
-INSTALLED_APPS = BASE_APPS + LOCAL_APPS
+THIRD_APPS = [
+    'rest_framework'
+]
+
+INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
